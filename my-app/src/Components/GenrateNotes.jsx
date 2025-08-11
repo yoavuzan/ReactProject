@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./GenrateNotes.css";
 import Note from "./Note";
 
@@ -6,6 +6,17 @@ function GenrateNotes() {
   const [Notes, SetNotes] = useState([]);
   const [Txt, SetTxt] = useState("");
   const [Title, SetTitle] = useState("");
+
+  useEffect(() => {
+    const savedNotes = localStorage.getItem("notes");
+    if (savedNotes) {
+      SetNotes(JSON.parse(savedNotes));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(Notes));
+  }, [Notes]);
 
   function updateNote(idToUpdate, updatedFields) {
     SetNotes((prevNotes) =>
