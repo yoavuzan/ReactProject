@@ -38,7 +38,10 @@
   box-sizing: border-box;
 }
 
-/* Add button */
+.inputTxt {
+  text-align: center;
+}
+
 .inputTxt button {
   background-color: #4cafef;
   color: white;

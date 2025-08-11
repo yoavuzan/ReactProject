@@ -80,7 +80,7 @@ function GenrateNotes() {
           onChange={(e) => SetTitle(e.target.value)}
           value={Title}
         />
-        <p>info</p>
+        <p>Info</p>
         <div>
           <textarea
             className="txtBox"
