@@ -4,16 +4,26 @@ import "./Note.css";
 
 ReactModal.setAppElement("#root");
 
-function Note({ note, onDelete, onUpdate }) {
+const categories = {
+  Personal: "#ffd966",
+  Work: "#6fa8dc",
+  Study: "#93c47d",
+  Other: "#cccccc",
+};
+
+function Note({ note, onDelete, onUpdate, bgColor }) {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState(note.title);
   const [txt, setTxt] = useState(note.txt);
+  const [category, setCategory] = useState(note.category || "Personal");
 
   const handleOpenModal = () => {
     setTitle(note.title);
     setTxt(note.txt);
+    setCategory(note.category || "Personal");
     setShowModal(true);
   };
+
   const handleCloseModal = (e) => {
     e.stopPropagation();
     setShowModal(false);
@@ -21,24 +31,30 @@ function Note({ note, onDelete, onUpdate }) {
 
   const handleSave = (e) => {
     e.stopPropagation();
-    onUpdate(note.id, { title, txt });
+    onUpdate(note.id, { title, txt, category });
     setShowModal(false);
   };
 
   return (
     <>
-      <div className="note" onClick={handleOpenModal}>
+      <div
+        className="note"
+        onClick={handleOpenModal}
+        style={{ backgroundColor: bgColor || "#fff" }}
+      >
         <button
           onClick={(e) => {
             e.stopPropagation();
             onDelete(note.id);
           }}
+          className="delete-btn"
         >
           X
         </button>
+        <small>{category}</small>
         <p>{new Date(note.id).toLocaleString()}</p>
-        <h3>{note.title}</h3>
-        <p>{note.txt}</p>
+        <h3>{title}</h3>
+        <p>{txt}</p>
       </div>
 
       <ReactModal
@@ -66,6 +82,21 @@ function Note({ note, onDelete, onUpdate }) {
             className="txtEdit"
           />
         </label>
+        <label>
+          Category:
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className="categorySelect"
+          >
+            {Object.keys(categories).map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+        </label>
+
         <div style={{ marginTop: "20px" }}>
           <button onClick={handleSave} style={{ marginRight: "12px" }}>
             Save

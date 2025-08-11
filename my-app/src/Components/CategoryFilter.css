@@ -1,0 +1,32 @@
+.categoryFilter {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+.categoryFilter button {
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: #f3f4f6; /* light gray background */
+  color: #333;
+  font-weight: 500;
+  transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.categoryFilter button:hover {
+  transform: translateY(-2px);
+  background-color: #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Active button (selected category) */
+.categoryFilter button.active {
+  background-color: var(--category-color, #007bff); /* uses category color */
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}

@@ -49,6 +49,22 @@
   background-color: #a71d2a;
 }
 
+.categorySelect {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.note small {
+  display: block;
+  margin-top: 6px;
+  font-style: italic;
+  color: #555;
+}
+
 /* ReactModal overlay styles */
 .ReactModal__Overlay {
   background-color: rgba(0, 0, 0, 0.5) !important;
