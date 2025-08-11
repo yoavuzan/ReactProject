@@ -1,0 +1,113 @@
+/* Container for inputs */
+.inputTxt {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.inputTxt p {
+  font-weight: bold;
+  margin: 6px 0 4px;
+  font-size: 14px;
+}
+
+/* Title input */
+.TitleTxt {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Textarea for note content */
+.txtBox {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* Add button */
+.inputTxt button {
+  background-color: #4cafef;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.inputTxt button:hover {
+  background-color: #3b8ec7;
+}
+
+/* Notes container */
+.showNotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Each note styling (works with Note component) */
+.note {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+}
+
+.note h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.note p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Optional delete/update buttons inside Note */
+.note button {
+  margin-top: 8px;
+  margin-right: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.note .delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.note .delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.note .update-btn {
+  background-color: #ffc107;
+  color: black;
+}
+
+.note .update-btn:hover {
+  background-color: #e0a800;
+}

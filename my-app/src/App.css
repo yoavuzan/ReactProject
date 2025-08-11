@@ -1,0 +1,30 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App background and font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Optional heading styles */
+h1, h2, h3 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Scrollbar for notes section if overflowing */
+.showNotes {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+/* Make buttons consistent across the app */
+button {
+  cursor: pointer;
+}

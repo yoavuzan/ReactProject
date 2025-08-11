@@ -1,0 +1,200 @@
+/* Note.css */
+
+/* Note card styles */
+.note {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 15px auto;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.note:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.note p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.note h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+/* Delete button inside note */
+.note button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+.note button:hover {
+  background-color: #a71d2a;
+}
+
+/* ReactModal overlay styles */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ReactModal content styles */
+.ReactModal__Content {
+  position: relative;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 550px;
+  width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  outline: none;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: auto;
+}
+
+.ReactModal__Content h2 {
+  margin-top: 0;
+  color: #222;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.ReactModal__Content p {
+  color: #444;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+/* Modal close button */
+.ReactModal__Content button {
+  margin-top: 25px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ReactModal__Content button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal background overlay */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.ReactModal__Content {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.3s ease;
+}
+
+/* Modal heading */
+.ReactModal__Content h2 {
+  margin: 0 0 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Labels */
+.ReactModal__Content label {
+  display: block;
+  font-weight: 500;
+  color: #444;
+  margin-top: 12px;
+}
+
+/* Input & textarea styles */
+.inputEdit,
+.txtEdit {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.inputEdit:focus,
+.txtEdit:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+.ReactModal__Content button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ReactModal__Content button:first-of-type {
+  background: #007bff;
+  color: white;
+}
+
+.ReactModal__Content button:first-of-type:hover {
+  background: #0056b3;
+}
+
+.ReactModal__Content button:last-of-type {
+  background: #ccc;
+  color: black;
+}
+
+.ReactModal__Content button:last-of-type:hover {
+  background: #aaa;
+}
+
+/* Animation for modal pop */
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
